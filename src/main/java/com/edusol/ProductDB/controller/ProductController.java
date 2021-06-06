@@ -70,6 +70,7 @@ public class ProductController {
 	}
 	@DeleteMapping("/delete-product")
 	public Object deleteProduct(@RequestParam int id) {
+		logger.info("product id:"+id);
 		return productservice.deleteProduct(id);
 	}
 	@GetMapping("/get-product-by-price-renge")
