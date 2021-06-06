@@ -40,7 +40,7 @@ public class ProductController {
 	@PostMapping("/add-product")
 	@SuppressWarnings("Unchecked")
 	public Object addProduct(@RequestBody ProductDB product) {
-		logger.info(product.toString());
+		logger.info(product.toString()+"Product added");
 		return productservice.addProduct(product);
 		
 	}
