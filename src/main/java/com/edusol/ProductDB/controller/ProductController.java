@@ -27,6 +27,7 @@ public class ProductController {
 	@Autowired
 	ProductService productservice;
 	
+	
 	@GetMapping("/get-Product")
 	public Object getProducts() {
 		@SuppressWarnings("Unchecked")
@@ -46,9 +47,9 @@ public class ProductController {
 	}
 	@GetMapping("/get-product-byid")
 	public Object getProductById(@RequestParam int id) {
-		List<ProductDB> product = (List<ProductDB>) productservice.getProductById(id);
-		logger.info(product.toString());
-		return product;
+		return productservice.getProductById(id);
+		
+		
 	}
 	@GetMapping("/get-product-byprice")
 	@SuppressWarnings("Unchecked")

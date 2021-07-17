@@ -74,7 +74,8 @@ public class ProductService {
 			logger.error(e.getMessage());
 			return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND) ;
 		}
-		return new ResponseEntity<>("productDB deleted ",HttpStatus.NOT_FOUND) ;
+		//return new ResponseEntity<>("productDB deleted ",HttpStatus.NOT_FOUND) ;
+		return("product deleted ") ;
  
 	}
 
